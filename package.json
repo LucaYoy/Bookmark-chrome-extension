@@ -1,0 +1,22 @@
+{
+  "name": "leed-tracker-extension",
+  "version": "1.0.0",
+  "description": "A bookmark type extension",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "bookmark",
+    "extension",
+    "leedtracker"
+  ],
+  "author": "Luca Petru Ion",
+  "license": "ISC",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "express": "^4.18.1",
+    "nedb": "^1.8.0",
+    "nodemon": "^2.0.18"
+  }
+}
