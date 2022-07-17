@@ -2,7 +2,7 @@ const express = require('express')
 const app = express()
 const cors = require('cors')
 const Datastore = require('nedb')
-const db = new Datastore('database.db')
+
 const PORT = 3000
 
 app.use(express.static('public'))
