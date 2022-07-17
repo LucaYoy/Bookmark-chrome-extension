@@ -46,7 +46,7 @@ function start(leedsCollection){
 		console.log('I got a POST request!')
 		//console.log(req.body)
 		const data = req.body
-		await leedsCollection.insertOne(data) //******
+		await leedsCollection.insertOne(data)
 		res.end()
 	})
 
