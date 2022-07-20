@@ -3,6 +3,7 @@ body {
     padding: 10px;
     font-family: Arial, Helvetica, sans-serif;
     min-width: 400px;
+    background: rgb(247, 202, 201);
 }
 
 input {
