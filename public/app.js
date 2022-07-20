@@ -14,14 +14,27 @@ let options = {
 }
 
 //Get Myleads from Db
-fetch('http://localhost:3000/api/start').then( res => res.json()).then( leeds => {
+fetch('http://localhost:3000/api/start').then( res => {
+    if (!res.ok) {
+        const e = new Error(`Erorr with code: ${res.status}`)
+        e.name = `${res.status} error`
+        throw e
+    }
+    return res.json()
+}).then( leeds => {
     //console.log(leeds)
     if (leeds) {
         myLeads = JSON.parse(leeds).myLeads
         count = myLeads.length
         render(myLeads)
     }
-}).catch(err => console.error(err)) 
+}).catch(err => {
+    if (err.name = 'Error') {
+        location = 'serverNotStarted.html'
+    } else {
+        console.error(err)
+    }
+}) 
 
 function render(leads) {
     let listItems = ""
